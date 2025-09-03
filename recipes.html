@@ -1,0 +1,69 @@
+<!<!-- recipes.html (Recipe Archive Page) --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Hub — Recipe Archive</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🍲 Community Hub</div>
+    <div class="links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="classes.html">Classes</a>
+      <a href="meals.html">Meals</a>
+      <a href="recipes.html" class="highlight">Recipes</a>
+      <a href="support.html">Support</a>
+    </div>
+  </nav>  <main class="container">
+    <h1>Recipe Archive</h1><!-- Search & Filter -->
+<section class="recipe-filters">
+  <input type="text" id="searchRecipe" placeholder="Search recipes..." />
+  <select id="filterIngredient">
+    <option value="">Filter by Ingredient</option>
+    <option value="rice">Rice</option>
+    <option value="chicken">Chicken</option>
+    <option value="vegetarian">Vegetarian</option>
+  </select>
+  <select id="filterRegion">
+    <option value="">Filter by Region</option>
+    <option value="african">African</option>
+    <option value="asian">Asian</option>
+    <option value="european">European</option>
+  </select>
+</section>
+
+<!-- Recipe List -->
+<section class="recipe-list">
+  <div id="recipeList" class="card-list">
+    <!-- Recipes dynamically loaded here -->
+  </div>
+</section>
+
+<!-- Add Recipe (admin only) -->
+<section class="add-recipe">
+  <h2>Add New Recipe</h2>
+  <form id="addRecipeForm">
+    <input type="text" id="recipeTitle" placeholder="Recipe Title" required />
+    <textarea id="recipeDescription" placeholder="Description" required></textarea>
+    <input type="text" id="recipeIngredients" placeholder="Ingredients (comma separated)" required />
+    <input type="text" id="recipeRegion" placeholder="Region" />
+    <button type="submit" class="primary-btn">+ Save Recipe</button>
+  </form>
+</section>
+
+<!-- Recipe Modal (view full recipe) -->
+<div id="recipeModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <p><strong>Ingredients:</strong> <span id="modalIngredients"></span></p>
+    <p><strong>Region:</strong> <span id="modalRegion"></span></p>
+    <button onclick="printRecipe()">🖨️ Print</button>
+    <button onclick="downloadRecipe()">⬇️ Download</button>
+  </div>
+</div>
+
+  </main>  <script src="scripts/firebase-config.js"></script>  <script src="scripts/recipes.js"></script></body>
+</html>
