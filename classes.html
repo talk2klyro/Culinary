@@ -1,0 +1,31 @@
+<!-- classes.html (Cooking Classes Page) --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Hub — Cooking Classes</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🍲 Community Hub</div>
+    <div class="links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="classes.html" class="highlight">Classes</a>
+      <a href="meals.html">Meals</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="support.html">Support</a>
+    </div>
+  </nav>  <main class="container">
+    <h1>Cooking Classes</h1><!-- Class List -->
+<section class="class-list">
+  <h2>Upcoming Classes</h2>
+  <div id="classList" class="card-list">
+    <!-- Classes dynamically loaded here -->
+  </div>
+</section>
+
+<!-- Create Class Button (admin only) -->
+<button id="addClassBtn" class="primary-btn">+ Create Class</button>
+
+  </main>  <script src="scripts/firebase-config.js"></script>  <script src="scripts/classes.js"></script></body>
+</html>
