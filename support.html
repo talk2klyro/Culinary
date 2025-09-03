@@ -1,0 +1,77 @@
+<!-- support.html (Donations & Crowdfunding Page in Naira) --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Hub — Support & Donations</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🍲 Community Hub</div>
+    <div class="links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="classes.html">Classes</a>
+      <a href="meals.html">Meals</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="support.html" class="highlight">Support</a>
+    </div>
+  </nav>  <main class="container">
+    <h1>Support the Community</h1>
+    <p>Your donations help us serve meals, run classes, and support local farmers.</p><!-- Tiered Donations -->
+<section class="donation-tiers">
+  <h2>Quick Donate</h2>
+  <div class="tiers">
+    <button onclick="donate(2000)">₦2,000 — Provide 2 Meals</button>
+    <button onclick="donate(5000)">₦5,000 — Sponsor 1 Cooking Class</button>
+    <button onclick="donate(10000)">₦10,000 — Support 1 Week of Meals</button>
+    <button onclick="donate(20000)">₦20,000 — Fund Mentorship Program</button>
+  </div>
+</section>
+
+<!-- Custom Donation -->
+<section class="custom-donation">
+  <h2>Custom Donation</h2>
+  <form id="customDonationForm">
+    <input type="number" id="customAmount" placeholder="Enter amount (₦)" required />
+    <button type="submit" class="primary-btn">Donate</button>
+  </form>
+</section>
+
+<!-- Crowdfunding Projects -->
+<section class="crowdfunding">
+  <h2>Active Community Projects</h2>
+  <div id="projectList" class="card-list">
+    <!-- Example Project -->
+    <div class="card">
+      <h3>Build a Community Kitchen</h3>
+      <p>Goal: ₦5,000,000</p>
+      <div class="progress-bar">
+        <div class="progress" style="width:40%"></div>
+      </div>
+      <p>Raised: ₦2,000,000</p>
+      <button onclick="donateToProject('kitchen')">Contribute</button>
+    </div>
+
+    <div class="card">
+      <h3>Farmer Support Fund</h3>
+      <p>Goal: ₦3,000,000</p>
+      <div class="progress-bar">
+        <div class="progress" style="width:60%"></div>
+      </div>
+      <p>Raised: ₦1,800,000</p>
+      <button onclick="donateToProject('farmers')">Contribute</button>
+    </div>
+  </div>
+</section>
+
+<!-- Donor Recognition -->
+<section class="donors">
+  <h2>Top Donors</h2>
+  <ul id="donorLeaderboard">
+    <!-- Filled dynamically -->
+  </ul>
+</section>
+
+  </main>  <script src="scripts/firebase-config.js"></script>  <script src="scripts/support.js"></script></body>
+</html>
