@@ -1,0 +1,48 @@
+<!-- meals.html (Community Meals Page) --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Hub — Community Meals</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🍲 Community Hub</div>
+    <div class="links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="classes.html">Classes</a>
+      <a href="meals.html" class="highlight">Meals</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="support.html">Support</a>
+    </div>
+  </nav>  <main class="container">
+    <h1>Community Meals</h1><!-- Meal Distribution Tracker -->
+<section class="meal-tracker">
+  <h2>Meals Distributed</h2>
+  <div id="mealsList" class="card-list">
+    <!-- Meals dynamically loaded here -->
+  </div>
+</section>
+
+<!-- Volunteer Assignment -->
+<section class="volunteers">
+  <h2>Volunteer Assignments</h2>
+  <div id="volunteerList" class="card-list">
+    <!-- Volunteers dynamically loaded here -->
+  </div>
+</section>
+
+<!-- Add Meal Button (admin only) -->
+<section class="add-meal">
+  <h2>Add Meal Distribution</h2>
+  <form id="addMealForm">
+    <input type="text" id="mealTitle" placeholder="Meal Title" required />
+    <input type="text" id="mealLocation" placeholder="Location" required />
+    <input type="number" id="mealCount" placeholder="Number of Meals" required />
+    <input type="text" id="mealVolunteers" placeholder="Volunteers (comma separated)" />
+    <button type="submit" class="primary-btn">+ Save Meal Distribution</button>
+  </form>
+</section>
+
+  </main>  <script src="scripts/firebase-config.js"></script>  <script src="scripts/meals.js"></script></body>
+</html>
