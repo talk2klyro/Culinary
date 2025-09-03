@@ -1,0 +1,62 @@
+<!-- das<!-- dashboard.html (Dashboard Page) --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Hub — Dashboard</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <!-- Chart.js for graphs -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🍲 Community Hub</div>
+    <div class="links">
+      <a href="dashboard.html" class="highlight">Dashboard</a>
+      <a href="classes.html">Classes</a>
+      <a href="meals.html">Meals</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="support.html">Support</a>
+    </div>
+  </nav>  <main class="container">
+    <!-- KPI Section -->
+    <section class="kpis">
+      <div class="kpi">
+        <h3 id="mealsServed">0</h3>
+        <p>Meals Served</p>
+      </div>
+      <div class="kpi">
+        <h3 id="studentsTrained">0</h3>
+        <p>Students Trained</p>
+      </div>
+      <div class="kpi">
+        <h3 id="donationsReceived">$0</h3>
+        <p>Donations</p>
+      </div>
+    </section><!-- Chart Section -->
+<section class="chart-section">
+  <h2>Impact Over Time</h2>
+  <canvas id="mealsChart"></canvas>
+</section>
+
+<!-- Recent Activity -->
+<section class="activity">
+  <h2>Recent Activity</h2>
+  <ul id="activityFeed"></ul>
+</section>
+
+<!-- Live Chat -->
+<section class="chat">
+  <h2>Live Chat</h2>
+  <div id="chatBox" class="chat-box"></div>
+  <div class="chat-input">
+    <input type="text" id="chatMessage" placeholder="Type a message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</section>
+
+  </main>  <script src="scripts/firebase-config.js"></script>  <script src="scripts/dashboard.js"></script></body>
+</html>
